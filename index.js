@@ -151,7 +151,7 @@ async function comparelists() {
   towatch.forEach(z => {
     if (cleanosmc.indexOf(z) === -1) newwatch.push(z);
   });
-  // console.table(newwatch);
+   console.table(newwatch);
   console.log(newwatch.length+" movies in the list that i dont have");
 }
 
@@ -180,6 +180,7 @@ async function main() {
   let osmc = await getosmc();
   var cleanosmc = [];
   osmc = osmc.filter(z => z.indexOf("/shit") > -1);
+  // console.table(osmc)
   osmc.forEach(z => {
     cleanosmc.push(z.split("|")[0]);
   });
